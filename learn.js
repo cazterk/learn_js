@@ -18,7 +18,7 @@ b = a;
 
 console.log(a); //run => ctrl + alt + n
 
-a = a + 1;
+a = a + 1; // same as 'a += 1'
 b = b + 5;
 c = c + "string2";
 
@@ -44,4 +44,33 @@ myVar++;
 // decrementing
 var myVar2 = 8;
 myVar2--;
-console.log(myVar2);
+
+// decimal numbers
+var ourDecimal = 5;
+
+var myDecimal = 2;
+
+//console.log("remainder:", ourDecimal % myDecimal);
+
+// compound assignment
+(a += 12), (a -= 12), (a *= 12), (a /= 12);
+
+//declare string variables
+var firstName = "caz";
+var lastName = "terk";
+
+// escaping literal quotes in strings
+var myStr = 'I am a "double quoted" string inside "double quotes" ';
+
+// escaping sequences
+var myStr2 = "FirstLine\nSecondLine\nThirdLine";
+
+// concatenating strings with plus operator
+var strConc = "first. " + "second.";
+
+// concatenating strings with plus equals operator
+var ourStr = "first. ";
+ourStr += "second.";
+
+// constructing strings with variables
+console.log(firstName + lastName);
