@@ -114,6 +114,8 @@ function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
 console.log(wordBlanks("dog", "big", "ran", "quickly"));
 console.log(wordBlanks("bike", "slow", "flew", "slowly"));
 
+//----------arrays----------//
+
 // store multiple values with arrays
 var ourArray = ["caz", 24];
 
@@ -160,3 +162,55 @@ var myList = [
   ["juice", 1],
   ["bananas", 4],
 ];
+
+//----------functions----------//
+
+function ourReusableFunction() {
+  console.log("what up what up");
+}
+
+ourReusableFunction();
+
+// arrow function
+const arrowFunction = () => {
+  console.log("this is an arrow fuction");
+};
+
+arrowFunction();
+
+// passing values to fuctions with arguments
+function ourFunctionWithArgs(a, b) {
+  console.log(a - b);
+}
+
+ourFunctionWithArgs(10, 5);
+
+// global scoping and functions
+var myGlobal = 10;
+
+function fun1() {
+  oopsGlobal = 5;
+}
+
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefine") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefine") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+fun1();
+fun2();
+
+// local scope and functions
+
+function myLocalScope() {
+  var myLocalVar = 5;
+  console.log(myLocalVar);
+}
+myLocalScope();
+
+// global vs local scope in functions
