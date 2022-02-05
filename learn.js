@@ -574,3 +574,167 @@ function chainToSwitch(val) {
 // console.log(chainToSwitch("bob"));
 
 // returning boolean values from functions
+function isLess(a, b) {
+  return a < b;
+}
+// console.log(isLess(17, 15));
+
+// reterning early pattern from functions
+function abTest(a, b) {
+  if (a < 0 || b < 0) {
+    return undefined;
+  }
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+// console.log(abTest(-2, 2));
+
+// counting cards
+var count = 0;
+
+function cc(card) {
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case "j":
+    case "q":
+    case "k":
+    case "a":
+      count--;
+      break;
+    default:
+      break;
+  }
+  var holdbet = "hold";
+  if (count > 0) {
+    holdbet = "bet";
+  }
+  return count + " " + holdbet;
+}
+
+cc(2);
+cc("k");
+cc(10);
+cc("k");
+cc("a");
+
+// console.log(cc(2));
+
+// build javascript objects
+var ourDog = {
+  name: "camper",
+  legs: 4,
+  tails: 1,
+  freinds: ["everything!"],
+};
+
+// accessing object properties with dot notation
+var nameValue = ourDog.name;
+var numOfLegs = ourDog.legs;
+
+// console.log("name :", nameValue + " and " + "number of legs :", numOfLegs);
+
+// accessing object properties with bracket notation
+var numOfFreinds = ourDog["freinds"];
+var numOfTails = ourDog["legs"];
+
+// console.log("freinds :", numOfFreinds + " and " + "number of tails :", numOfTails);
+
+// accessing object properties with variables
+var testObj = {
+  12: "caz",
+  16: "jot",
+  19: "maz",
+};
+
+var playerNumber = 16;
+var player = testObj[playerNumber];
+
+// updating object properties
+
+ourDog.name = "happy camper";
+// console.log(ourDog);
+
+// add new properties to an object
+ourDog.bark = "bow-bow"; //  or ourDog['bark] = 'bow-bow'
+// console.log(ourDog);
+
+// delete properties from an object
+delete ourDog.bark;
+// console.log(ourDog);
+
+// using objects for lookups
+function phoneticLookup(val) {
+  var result = "";
+  var lookup = {
+    alpha: "adams",
+    bravo: "boston",
+    charlie: "chicago",
+    delt: "denver",
+    echo: "easy",
+    foxtrot: "frank",
+  };
+  result = lookup[val];
+  return result;
+}
+// console.log(phoneticLookup("foxtrot"));
+
+//  testing objects for properties
+function checkObj(checkProp) {
+  var lookup = {
+    alpha: "adams",
+    bravo: "boston",
+    charlie: "chicago",
+    delt: "denver",
+    echo: "easy",
+    foxtrot: "frank",
+  };
+
+  if (lookup.hasOwnProperty(checkProp)) {
+    return lookup[checkProp];
+  } else {
+    return "not found";
+  }
+}
+// console.log(checkObj("hello"));
+
+// manipulating complex objects
+var myMusic = [
+  {
+    artist: "bill joel",
+    title: "piano mas",
+    release_year: 1993,
+    formats: ["cd", "8t", "lp"],
+    gold: true,
+  },
+  {
+    artist: "beau carnes",
+    title: "cereal man",
+    release_year: 2003,
+    formats: ["youtube vide"],
+  },
+];
+
+// accessing nested objects
+var myStorage = {
+  car: {
+    inside: {
+      "glove box": "maps",
+      "passenger seat": "crumbs",
+    },
+    outside: {
+      trunk: "jack",
+    },
+  },
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"];
+
+// console.log(gloveBoxContents);
+
+// accessing nested arrays
