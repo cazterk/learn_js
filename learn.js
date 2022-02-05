@@ -393,3 +393,5 @@ function testLogicalOr(val) {
   return "inside";
 }
 // console.log(testLogicalOr(11));
+
+// else statements
