@@ -264,3 +264,34 @@ console.log(nextInLine(testArr, 6));
 console.log("After: " + JSON.stringify(testArr));
 
 // boolean values
+function welcomeToBooleans() {
+  return false;
+}
+
+// conditional logic with if statements
+function ourTrueOrFalse(isItTrue) {
+  if (isItTrue) {
+    return "is true";
+  }
+  return " is false";
+}
+//console.log(ourTrueOrFalse(false));
+
+// comparison with the equality operator
+
+function testEqual(val) {
+  if (val == 12) {
+    return "equals";
+  }
+  return "!equals";
+}
+//console.log(testEqual(10));
+
+// comparion with the strict equality operator
+function testStrict(val) {
+  if (val === "10") {
+    return "equals";
+  }
+  return "not equals";
+}
+//console.log(testStrict(10));
