@@ -927,4 +927,20 @@ function convertToInteger(str) {
 function convertToInteger2(str) {
   return parseInt(str, 2);
 }
-console.log(convertToInteger2("10011"));
+// console.log(convertToInteger2("10011"));
+
+// use the conditional (ternary) operator
+function checkEqual(a, b) {
+  /* if (a === b) {
+    return true;
+  } else {
+    return false;
+  }  => */
+  return a === b ? true : false;
+}
+
+// use mutiple conditional (ternary) operators
+function checkSign(num) {
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+console.log(checkSign(0));
