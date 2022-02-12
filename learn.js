@@ -1174,4 +1174,36 @@ const createPerson = (name, age, gender) => ({
 });
 // console.log(createPerson("jotson tembo", 24, "male"));
 
-//  write concise declarative functions
+// write concise declarative functions
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    "use strict";
+    this.gear = newGear;
+  },
+};
+bicycle.setGear(3);
+// console.log(bicycle.gear);
+
+// use class syntax to define a constructor function
+class SpaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+  }
+}
+var zeus = new SpaceShuttle("jupiter");
+// console.log(zeus.targetPlanet);
+
+function makeClass() {
+  class Vegetable {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+  return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable("carrot");
+// console.log(carrot.name);
+
+// use getters and setters to control access to an objec
