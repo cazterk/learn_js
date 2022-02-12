@@ -943,4 +943,31 @@ function checkEqual(a, b) {
 function checkSign(num) {
   return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
 }
-console.log(checkSign(0));
+// console.log(checkSign(0));
+
+// differences between the var and let keywords
+let catName = "quincy";
+let quote;
+
+catName = "beau";
+
+function catTalk() {
+  "use strict";
+
+  catName = "oliver";
+  quote = catName + " say meow";
+}
+// console.log(catTalk());
+
+// compare scopes of var and let keywords
+function checkScope() {
+  "use strict";
+  let i = "function scope";
+  if (true) {
+    let i = "block scope";
+    console.log("block scope i is: ", i);
+  }
+  console.log("function scope i is: ", i);
+  return i;
+}
+console.log(checkScope());
