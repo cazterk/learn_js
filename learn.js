@@ -1113,3 +1113,30 @@ let t = 8,
 // console.log(j);
 
 // destructuring assignment with rest operator
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function removeFirstTwo(list) {
+  const [, , ...arry] = list;
+
+  return arry;
+}
+const arry = removeFirstTwo(source);
+// console.log(arry);
+// console.log(source);
+
+// // destructuring assignment to pass an object as a function's parameters
+
+const stats = {
+  max: 56.78,
+  standaed_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85,
+};
+const half = (function () {
+  return function half({ max, min }) {
+    return (max + min) / 2.0;
+  };
+})();
+// console.log(stats);
+console.log(half(stats));
