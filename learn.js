@@ -909,3 +909,22 @@ function randomWholeNum() {
 // console.log(randomWholeNum());
 
 // generate random whole numbers within a range
+
+function ourRandomRange(ourMin, ourMax) {
+  return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+// console.log(ourRandomRange(1, 9));
+
+// use the parseInt function
+
+function convertToInteger(str) {
+  return parseInt(str);
+}
+// console.log(convertToInteger("56"));
+
+//  use thr parseInt function with a radix
+
+function convertToInteger2(str) {
+  return parseInt(str, 2);
+}
+console.log(convertToInteger2("10011"));
