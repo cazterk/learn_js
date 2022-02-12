@@ -1058,4 +1058,58 @@ let arr3;
   arr3 = [...arr2];
   arr2[0] = "potato";
 })();
-console.log(arr3);
+// console.log(arr3);
+
+//use destruction assignment to assign variables from objects
+var voxel = { x: 3.6, y: 7.4, z: 6.54 };
+
+/* old way
+var x = voxel.x;
+var y = voxel.y;
+var z = voxel.z;
+*/
+// new way
+// const { x: a, y: b, z: c } = voxel;
+
+const AVG_TEMPERATURES = {
+  today: 77.5,
+  tomorrow: 79,
+};
+
+function getTempOfTmrw(avgTemperatures) {
+  "use strict";
+  const { tomorrow: tempOfTomorrow } = avgTemperatures;
+  return tempOfTomorrow;
+}
+// console.log(getTempOfTmrw(AVG_TEMPERATURES));
+
+// destructuring assignment with nested objects
+
+const LOCAL_FORCAST = {
+  today: { min: 72, max: 83 },
+  tomorrow: { min: 73.3, max: 84.6 },
+};
+
+function getMaxOfTmrw(forecast) {
+  "use strict";
+  const {
+    tomorrow: { max: maxOfTomorrow },
+  } = forecast;
+
+  return maxOfTomorrow;
+}
+// console.log(getMaxOfTmrw(LOCAL_FORCAST));
+
+// use destructuring assignment to assign variables from arrays
+const [z, x, , y] = [1, 2, 3, 4, 5, 6];
+console.log(z, x, y);
+
+let t = 8,
+  j = 6;
+(() => {
+  "use strict"[(t, j)] = [j, t];
+})();
+// console.log(t);
+// console.log(j);
+
+// destructuring assignment with rest operator
