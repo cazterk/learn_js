@@ -1006,7 +1006,7 @@ function freezeObj() {
   try {
     MATH_CONSTANTS.PI = 99;
   } catch (ex) {
-    console.log(ex);
+    console.log(" Cannot assign to read only property 'PI' of object ");
   }
   return MATH_CONSTANTS.PI;
 }
@@ -1045,8 +1045,17 @@ const increment = (function () {
 // rest operator (function parameters)
 const sum2 = (function () {
   return function sum2(...args) {
-    const args = [x, y, z];
     return args.reduce((a, b) => a + b, 0);
   };
 })();
-console.log(sum2(1, 2, 3));
+console.log(sum2(1, 2, 3, 4));
+
+// use the spread operator to evaluate arrays in-place
+
+const arr2 = ["jan", "feb", "mar", "apr", "may"];
+let arr3;
+(function () {
+  arr3 = [...arr2];
+  arr2[0] = "potato";
+})();
+console.log(arr3);
