@@ -11,7 +11,7 @@ let fetchData = function (data) {
 // parse the data
 let parseData = function (data) {
   return new Promise((resolve, reject) => {
-    foo = bar;
+    // foo = bar;
     setTimeout(() => {
       let parseOutput = `parsed the data for id: ${data.id} with message: ${data.message}`;
       resolve({ parsed: parseOutput });
