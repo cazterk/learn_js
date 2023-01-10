@@ -40,6 +40,7 @@ console.log(myvar)
 
 let arr = [1,2,5,9,4]
 
+// check sum indexes
 const checkSum = (num, arr) =>{
   for(let i = 0; i< arr.length; i++){
     for(let j = 0; j< arr.length; j++){
@@ -50,3 +51,11 @@ const checkSum = (num, arr) =>{
 }
 
 console.log(checkSum(3, arr))
+
+// sum of array elements
+const sum = (...args) =>{
+let total = 0
+ args.forEach((x)=>total+=x)
+ return total
+}
+console.log(sum(1,2,3))
