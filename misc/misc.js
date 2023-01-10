@@ -37,3 +37,16 @@ function foo(){
 let myvar = foo
 
 console.log(myvar)
+
+let arr = [1,2,5,9,4]
+
+const checkSum = (num, arr) =>{
+  for(let i = 0; i< arr.length; i++){
+    for(let j = 0; j< arr.length; j++){
+      let sum =  arr[i] + arr[j]
+      if(sum === num) return [i, j]
+    }
+  }
+}
+
+console.log(checkSum(3, arr))
