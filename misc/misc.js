@@ -66,3 +66,9 @@ const functioral = (...args) => {
   return factArr;
 };
 console.log("fact :", functioral(0, 1, 2, 3, 4));
+
+const findMStr=(str)=>{
+  let len = str.length 
+  let middleStr= parseInt(len/2, 10)
+return (str[middleStr])
+}
