@@ -67,8 +67,21 @@ const functioral = (...args) => {
 };
 console.log("fact :", functioral(0, 1, 2, 3, 4));
 
-const findMStr=(str)=>{
-  let len = str.length 
-  let middleStr= parseInt(len/2, 10)
-return (str[middleStr])
-}
+const findMStr = (str) => {
+  let len = str.length;
+  let middleStr = parseInt(len / 2, 10);
+  return str[middleStr];
+};
+
+let arr2 = [1, 2, 3, 4, 5, 6, 8, 9, 15, 20, 21, 25, 26, 30, 33, 35];
+let arrValue = arr2.values();
+
+const mOfFiveOrThree = (args) => {
+  let filteredArr = args.filter((x) => (x = x % 3 && x % 5) == 0);
+  let sum = 0;
+  filteredArr.forEach((x) => (sum += x));
+  return sum;
+};
+
+// Log to console
+console.log("filtered :", mOfFiveOrThree(arr2));
