@@ -85,3 +85,20 @@ const mOfFiveOrThree = (args) => {
 
 // Log to console
 console.log("filtered :", mOfFiveOrThree(arr2));
+
+const compStr = (str1, str2) => {
+  let res = [];
+  for (let i = 0; i < str1.length; i++) {
+    if (!str2.includes(str2[i])) {
+      res.push(str1[i]);
+    }
+  }
+  for (let i = 0; i < str2.length; i++) {
+    if (!str1.includes(str2[i])) {
+      res.push(str2[i]);
+    }
+  }
+  return res.join("");
+};
+
+console.log(compStr("abvds", "abvswews"));
