@@ -42,10 +42,14 @@ function bfs(start) {
     const airport = queue.shift(); // mutates the queue
 
     const destinations = adjacencyList.get(airport);
+    let steps = 0;
 
     for (const destination of destinations) {
       if (destination === "BKK") {
-        console.log(destination + " found");
+        for (let i = 0; i < destination.length; i++) {
+          steps++;
+        }
+        console.log(`BFS found Bangkok in ${steps} steps`);
       }
       if (!visited.has(destination)) {
         visited.add(destination);
@@ -56,4 +60,23 @@ function bfs(start) {
   }
 }
 
-bfs("PHX");
+function dfs(start, visited = new Set()) {
+  console.log(start);
+  visited.add(start);
+  let steps = 0;
+  const destinations = adjacencyList.get(start);
+  for (const destination of destinations) {
+    if (destination === "BKK") {
+      for (let i = 0; i < destination.length; i++) {
+        steps++;
+      }
+      console.log(`DFS found Bangkok in ${steps} steps`);
+      return;
+    }
+    if (!visited.has(destination)) {
+      dfs(destination, visited);
+    }
+  }
+}
+
+dfs("PHX");
