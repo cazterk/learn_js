@@ -102,3 +102,31 @@ const compStr = (str1, str2) => {
 };
 
 console.log(compStr("abvds", "abvswews"));
+
+// array opts
+const users = [
+  {
+    id: 1,
+    name: "Dan",
+    age: 21,
+    isActive: true,
+  },
+  {
+    id: 2,
+    name: "Sam",
+    age: 25,
+    isActive: true,
+  },
+  {
+    id: 3,
+    name: "Ben",
+    age: 30,
+    isActive: false,
+  },
+];
+const names = users
+  .sort((user1, user2) => (user1.age < user2.age ? 1 : -1))
+  .filter((user) => user.isActive)
+  .map((x) => x.name);
+
+console.log("names ", names);
